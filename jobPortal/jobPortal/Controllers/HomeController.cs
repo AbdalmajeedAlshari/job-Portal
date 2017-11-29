@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace jobPortal.Controllers
 {
-    public class IndixController : Controller
+    public class HomeController : Controller
     {
-        // GET: Indix
+        // GET: Home
         public ActionResult Index()
         {
             return View();
