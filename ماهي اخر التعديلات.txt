@@ -1,7 +1,1 @@
-*ãÔÑæÚ asp.net MVC ÝÇÑÛ*
-
----------------------
-Hi I Update it
-Hi Hussine
---------------------
-Home Page & it's Controler is Fixid
+****New Full MVC Project****
