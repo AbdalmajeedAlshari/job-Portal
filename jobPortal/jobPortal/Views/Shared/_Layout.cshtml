@@ -6,7 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,28 +18,120 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="#" class="navbar-brand">
+                    <img class="logo-img" src="~/images/Job-Searh-icon-Converted1.png" class="logo-img" />
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <div class="navbar-collapse collapse nav-font">
+                <ul class="nav navbar-nav navbar-text">
+                    <li>
+                        <a href="~/Home/index">
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/index">
+                            الوظائف
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/index">
+                            كيف تستخدم موقع لينك
+                        </a>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+    <!--Body Content-->
+    <div class="container body-content pageContent " id="cont">
+        <div class="row">
+            @RenderBody()
+            <hr />
+        </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!--Footer Content-->
+    <footer class="page-footer">
+      
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row">
+                        <h4>كيف تستخدم موقع لينك ؟</h4>
+                        <ul class="top-footer">
+                            <li>
+                                <a>بحث عن وظائف</a>
+                            </li>
+                            <li>
+                                <a>إدارة طلبات الوظائف</a>
+                            </li>
+                            <li>
+                                <a>إنشاء سيرتك الذاتية </a>
+                            </li>
+                            <li>
+                                <a>نشر وظيفة</a>
+                            </li>
+                            <li>
+                                <a>إدارة طلبات التقدم</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row aboutIt">
+                        <h4>نبذة عن موقع لينك :</h4>
+                        <p>
+                            إن موقع لينك لتوظيف هو أكبر موقع للوظائف في الشرق الأوسط, حيث يقدم مجموعة كاملة من حلول التوظيف الشاملة والمتكاملة وأدوات التخطيط المهني. ويعمل موقع بيت.كوم الذي تم تأسيسه في العام 2000 بفاعلية كاملة باللغة العربية، والإنكليزية والفرنسية وهو يوفر الطرق الأسرع والأسهل والأكثر فعالية ومردوداً لأصحاب العمل لكي يجدوا نخبة المرشحين للوظائف، وللباحثين عن عمل لكي يجدوا أفضل الوظائف في منطقة الشرق الأوسط وشمال أفريقيا. تجدر الإشارة الى أن بيت.كوم يساعد كل من الباحثين عن عمل وأصحاب عمل على التواصل مع بعضهم البعض من دون التدخل في أي عملية توظيف تتم عبر الموقع.
+                        </p>
+                        <a href="#">
+                            <img src="~/images/icons8-facebook-50.png" />
+                        </a>
+                        <a href="#">
+                            <img src="~/images/icons8-googleplus.png" />
+                        </a>
+                        <a href="#">
+                            <img src="~/images/icons8-twitter-50.png" />
+                        </a>
+                        <a href="#">
+                            <img src="~/images/icons8-youtube-50.png" />
+                        </a>
+                       
+                    </div>
+                </div>
+                <div class="messaging col-sm-4">
+                    <h4>تواصل معنا </h4>
+                    <div class="input-group send-message">
+                            <label>الأسم الكامل:</label>
+                            <input type="text" name="Name" id="fulName" class="preMsg"/> <br/>
+                            <label>البريد الإلكتروني:</label>
+                            <input type="text" name="Email" class="preMsg"/> <br/>
+                            <label>موضوع الرسالة :</label>
+                            <input type="text" name="subject" class="preMsg"/> <br />
+                            <label>نص الرسالة :</label>
+                            <textarea name="Message" rows="5" cols="20" id="textArea"></textarea> <br/>
+                            <input type="submit" name="send" value="ارسال" class="btn btn-group-vertical" />
+                    </div>
+                </div>
+            </div>
+              <hr />
+            <div class="row">
+                      <span class="copyRight">
+                          <i class="glyphicon glyphicon-copyright-mark"></i>
+                          جميع الحقوق محفوظة لموقع لينك للتوظيف          
+                      </span>
+                      <span class="languages">
+                          <a>English</a>
+                          <a>عربي</a>
+                      </span>
+             </div>
+       
+          </div>
+    </footer>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+                <script src="~/Scripts/OurJQuery.js"></script>
 </body>
 </html>

@@ -139,6 +139,7 @@ namespace jobPortal.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Gender = new SelectList(new[] { "ذكر", "انثى" });
             return View();
         }
 
@@ -151,7 +152,8 @@ namespace jobPortal.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                ViewBag.Gender = new SelectList(new[] { "ذكر", "انثى" });
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Gender=model.Gender };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
