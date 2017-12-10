@@ -1,31 +1,111 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/style-loginForm.css" rel="stylesheet" />
+<div style="margin-top:-100px;">
+    <img src="~/images/HomeBackground.png" style="width:100%; margin-bottom:10px;" />
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+   @Html.Partial("_LoginForm")
+
+    <div class="container">
+<div class="row container-imgs">
+    <h3 class="TitleBoxs">ماهو موقع لينك للتوظيف ؟</h3>
+    <p>هو موقع يهدف الى توفير خدمات البحث عن الوظائف في البلدان العربية والاجنبية بصورة مجانية وايظا يمكن لمزودي الوظائف البحت عن الموظفون في اي مجال وظيفي وايضا بشكل مجاني وبذالك يعتبر اول موقع يقدم مثل هذه الخدمات بشكل مجاني على عكس المواقع الأخرى العربيه او الأجنبية   </p>
+    <div class="col-sm-3 thumbnail workImgs">
+        <img src="~/images/MoneyIcon.png" />
+        <p>حصولك على الوظيفة التي تريدها دون دفع اي مقابل</p>
+    </div>
+    <div class="col-sm-3 thumbnail workImgs">
+        <img src="~/images/resume.jpg"/>
+        <p>نساعدك في الحصول على الوظيفة التي تناسب قدراتك المذكورةفي سيرتك الذاتيه</p>
+    </div>
+    <div class="col-sm-3 thumbnail workImgs">
+        <img src="~/images/stopwatch.png"/>
+        <p>حصولك على الوظيفة في اسرع وقت ممكن وذلك بسبب اتاحة وعرض سيرتك الذاتية لمزودين الوظائف</p>
+    </div>
+    <div class="col-sm-3 thumbnail workImgs">
+        <img src="~/images/SelectEmployee.jpg" />
+        <p>نساعد مزودو الوظائف في اختيار الموظف المناسب حسب سيرته الذاتية</p>
+    </div>
 </div>
+        <div class="row container-imgs" id="search-according-domain">
+            <h3 class="TitleBoxs">ابحث عن الوظائف بحسب التخصص</h3>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/1.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div> 
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/2.jpg"/>
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/3.jpg"/>
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/4.jpg"/>
+                <p> <!--Write Here about job--> </p>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/5.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/6.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/7.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/8.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+        </div>
+
+        <div class="row container-imgs" id="search-according-domain">
+            <h3 class="TitleBoxs">ابحث عن الوظائف بحسب البلد</h3>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/9.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/10.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/11.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/12.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/1.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/2.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/3.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+            <div class="thumbnail col-sm-3 searchImgs">
+                <img src="~/images/4.jpg" />
+                <p> <!--Write Here about job--> </p>
+            </div>
+
+        </div>
+        <div class="jumbotron">
+            <h2 style="text-align:center;">تقارير احصائية</h2>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+
 </div>
